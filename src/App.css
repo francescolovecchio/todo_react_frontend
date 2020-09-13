@@ -1,0 +1,157 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+ul.todos, ul.lists{
+  padding: 0;
+  width: 400px;
+  margin: 20px auto;
+  min-height: 300px;
+}
+ul.todos li, ul.lists li{
+  text-align: left;
+  border-bottom: 1px solid slategray;
+  padding: 10px 0px;
+  list-style-type: none;
+}
+ul.todos li.completed{
+  text-decoration: line-through;
+}
+ul.todos li:hover span.cross::after, ul.lists li:hover span.cross::after{
+  content: '\02A2F'; /* CROCE */
+  font-size: 24px;
+  color: red;
+  float: right;
+  margin-right: 5px;
+
+
+}
+ul.todos li:last-child, ul.lists li:last-child{
+  border: 0px;
+}
+ul.todos li span.uncomplete::after{
+  content: '\025a1'; /* QUADRATO VUOTO */
+  font-size: 28px;
+  padding-right: 5px;
+  cursor: pointer;
+  min-width: 150px;
+}
+ul.todos li span.completed::after{
+  content: '\02713'; /* CHECK */
+  font-size: 28px;
+  padding-right: 5px;
+  cursor: pointer;
+  min-width: 150px;
+  color: green;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+ul.menu li {
+  display: inline-block;
+  min-width: 120px;
+  
+}
+
+ul.menu li a{
+  font-size: .95em;
+  color: white;
+  padding: 1em;
+  transition: .5s;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul.menu li a:hover,
+ul.menu li a:active{
+  color: red;
+  background-color: #3b80d1;
+  text-decoration: underline;
+}
+
+ul.menu li a.active{
+  background-color: #3b80d1;
+  text-decoration: none;
+}
+
+ul.footer {
+  background-color: transparent;
+}
+ul.footer li{
+  padding: 5px;
+  background-color: #282c34;
+}
+ul.footer li.active {
+  background-color: #3b80d1;
+  color: #fff;
+}
+ul.footer li a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.form, .login, .signup{
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+.form-group{
+  margin: 10px;
+
+}
+.form-group input{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.btn{
+  padding: 5px;
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+  border-radius: 5px;
+  min-width: 120px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn-success {
+  background-color: #3b80d1;
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  align-items: stretch;
+}
+
+button[type=reset]{
+  background-color: #fff;
+  color: #222;
+}
